@@ -1,0 +1,144 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - online
+  - offline
+  - appointment
+  - physician
+  - dermatologist
+  - paediatrician
+  - orthopaedic
+  - gynecologist
+  - cardiologist
+  - dentist
+  - surgeon
+  - doctor
+  - ask_doctor
+  - morning
+  - evening
+  - time
+  - ask_time
+  - user name
+  - user age
+  - ask user_name
+  - ask user_age
+
+entities:
+  - doctor_name
+  - timings
+  - user_name
+  - user_age
+
+slots:
+  doctor_name:
+    type: text
+    influence_conversation: true
+    # mappings:
+    #   - type: from_entity
+    #     entity: doctor_name
+
+  timings:
+    type: text
+    influence_conversation: true
+
+  user_name:
+    type: text
+    influence_conversation: true
+
+  user_age:
+    type: text
+    influence_conversation: true    
+    
+
+responses:
+  utter_greet:
+  - text: "Hey! I am chatbot for TA9 hospital. Do you wish to make an appointment?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_affirm:
+  - text: "Do you wish to make an appointment for online consultation or offline visit."
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_appointment:
+  - text: "Do you wish to make an appointment for online consultation or in person visit to the hospital?"
+
+  utter_online:
+  - text: "Select specialization of doctor. The available specialization are General Physician, Dermatologist, Orthopaedic, Paediatrician."
+
+  utter_offline:
+  - text: "Select specialization of Doctor. The available specialization are General Physician, Dermatologist, Gynaecologist, Cardiologist, Orthopaedic, Paediatrician, Dentist, Surgeon."
+
+  utter_physician:
+  - text : "The available physicians are Dr. Pramod Pandey, Dr. Laxmi Miraj, Dr. Shanti Patil, Dr. Anil Deshmukh , Dr. Mamta Datta. Input one of the doctor names."
+
+  utter_dermatologist:
+  - text : "The available dermatologist are Dr. Atul Sharma, Dr. Tejas Kumar, Dr. Anjali Mhatre. Input one of the doctor names."
+
+  utter_paediatrician:
+  - text : "The available paediatrician are Dr. Sunita Shetty, Dr. Suresh Lula, Dr. Varun Joshi. Input one of the doctor names."
+
+  utter_orthopaedic:
+  - text : "The available orthopaedic are Dr. Sanjeev Shrinathan, Dr. Biradar Kulkarni. Input one of the doctor names."
+
+  utter_gynecologist:
+  - text: "The available Gynecologists are Dr. Happy Singh, Dr. Pooja Desai. Input one of the doctor names."
+
+  utter_cardiologist:
+  - text: "The available cardiologists are Dr. Shishir Chawla, Dr. Rajesh Karnik. Input one of the doctor names."
+
+  utter_dentist:
+  - text: "The available dentists are Dr. Vaishnavi Modi, Dr. Shweta Jain, Dr. Mohammad Shoeib. Input one of the doctor names."
+
+  utter_surgeon:
+  - text: "The available surgeons are Dr. Shubham Gurav, Dr. Sumit Wakde, Dr. Arun Mishra. Input one of the doctor names."
+
+  utter_remember:
+  - text: "Thanks. I'll remember that. Please select one of the slots: Morning or Evening. Provide input."
+
+  utter_morning:
+  - text: "The available slots are 8 am, 9 am, 10 am, 11 am, 12 pm, 1 pm. Please input your timing."
+
+  utter_evening:
+  - text: "The available slots are 6 pm, 7 pm, 8 pm, 9 pm. Please input your timing."
+  
+  utter_remember_time:
+  - text: "Thanks. I'll remember the time. Please Enter your name."
+
+  utter_remember_user_name:
+  - text: "Thanks. I'll remember your name. Please input your age from the slots: less than 18, 18 to 29, 30 to 49, 50 to 64, 65 and above."
+
+  utter_remember_user_age:
+  - text: "Thanks. I'll remember your age."
+
+
+
+actions:
+- action_say_user_name
+- action_say_user_age
+- action_say_doctor
+- action_say_timings
+- utter_greet
+- utter_morning
+- utter_evening
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

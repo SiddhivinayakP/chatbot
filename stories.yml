@@ -1,0 +1,88 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_affirm
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story : orthopaedic
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: offline
+  - action: utter_offline
+  - intent: paediatrician
+  - action: utter_paediatrician
+  - intent: doctor
+    entities:
+    - doctor_name: Dr. Sanjeev Shrinathan
+  - slot_was_set:
+    - doctor_name: Dr. Sanjeev Shrinathan
+  - action: utter_remember
+  - intent: ask_doctor
+  - action : action_say_doctor
+
+
+- story: online
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: online
+  - action: utter_online
+  - intent: physician
+  - action: utter_physician
+  - intent: doctor
+    entities:
+    - doctor_name: Dr. Sanjeev Shrinathan
+  - slot_was_set:
+    - doctor_name: Dr. Sanjeev Shrinathan
+  - action: utter_remember
+  - intent: morning
+  - action: utter_morning
+  - intent: time
+    entities:
+    - timings: 8 am
+  - slot_was_set:
+    - timings: 8 am
+  - action: utter_remember_time
+  - intent: user name
+    entities:
+    - user_name: Adarsh Pawshe
+  - slot_was_set:
+    - user_name: Adarsh Pawshe
+  - action: utter_remember_user_name
+  - intent: user age
+    entities:
+    - user_age: less than 18
+  - slot_was_set:
+    - user_age: less than 18
+  - action: utter_remember_user_age
+  - intent: ask user_name
+  - action: action_say_user_name
+  - intent: ask user_age
+  - action: action_say_user_age
+

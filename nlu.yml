@@ -1,0 +1,302 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: online
+  examples: |
+    - online
+    - Online
+    - Consultation online
+    - online consultation
+    - from home
+    - Home internet
+    - Video call
+    - call
+
+- intent : offline
+  examples: |
+    - offline
+    - in-person
+    - person
+    - in hospital
+    - Visit
+    - off
+    - Offline
+    - Physical
+    - Offline visit
+    - in person visit
+
+- intent: appointment
+  examples: |
+    - appointment
+    - apt
+    - Appointment
+    - Apointment
+
+- intent: physician
+  examples: |
+    - general physician
+    - general
+    - pyhsician
+    - Pyhsician
+    - GP
+    - gp
+
+- intent: dermatologist
+  examples: |
+    - dermat
+    - derma
+    - Dermatologist
+    - skin
+    - hair
+    - dermatologist
+    - Dermat
+    - skin doctor
+    - skin specialist
+
+- intent: orthopaedic
+  examples: |
+    - orthopadic
+    - Orthopaedic
+    - orhtopaedic
+    - bones specialist
+    - ortho
+    - Bones 
+
+- intent: paediatrician
+  examples: |
+    - paediatrician
+    - Paediatrician
+    - padiatrician
+    - pedatrician
+    - pead
+    - kids
+    - children specialist
+    - small
+    - infant doctor
+  
+- intent: gynecologist
+  examples: |
+    - gynac
+    - Gynecologist
+    - gynacologist
+    - Gyna
+    - women
+    - woman
+
+- intent : cardiologist
+  examples: |
+    - cardio
+    - heart
+    - Cardiologist
+    - cardiologist
+    - heart specialist
+    - blood pressure
+    - pressure
+
+- intent: dentist
+  examples: |
+    - dentist
+    - DEntist
+    - teeth
+    - Tooth
+    - wisdom tooth
+    - braces
+
+- intent: surgeon
+  examples: |
+    - surgeon
+    - surgery
+    - operation
+    - Surgeon
+    - surg
+
+- intent: doctor
+  examples: |
+    - [Dr. Sanjeev Shrinathan](doctor_name) 
+    - [Dr. Biradar Kulkarni](doctor_name)
+    - [Dr. Pramod Pandey](doctor_name)
+    - [Dr. Laxmi Miraj](doctor_name)
+    - [Dr. Shanti Patil](doctor_name)
+    - [Dr. Anil Deshmukh](doctor_name)
+    - [Dr. Mamta Datta](doctor_name)
+    - [Dr. Atul Sharma](doctor_name)
+    - [Dr. Tejas Kumar](doctor_name)
+    - [Dr. Anjali Mhatre](doctor_name)
+    - [Dr. Sunita Shetty](doctor_name)
+    - [Dr. Varun Joshi](doctor_name)
+    - [Dr. Suresh Lula](doctor_name)
+    - [Dr. Happy Singh](doctor_name)
+    - [Dr. Pooja Desai](doctor_name)
+    - [Dr. Shishir Chawla](doctor_name)
+    - [Dr. Rajesh Karnik](doctor_name)
+    - [Dr. Vaishnavi Modi](doctor_name)
+    - [Dr. Mohammad Shoeib](doctor_name)
+    - [Dr. Shweta Jain](doctor_name)
+    - [Dr. Shubham Gurav](doctor_name)
+    - [Dr. Sumit Wakde](doctor_name)
+    - [Dr. Arun Mishra](doctor_name)
+
+- intent: time
+  examples: |
+    - [8 am](timings) 
+    - [9 am](timings)
+    - [10 am](timings)
+    - [11 am](timings)
+    - [12 pm](timings)
+    - [1 pm](timings)
+    - [6 pm](timings)
+    - [7 pm](timings)
+    - [8 pm](timings)
+    - [9 pm](timings)
+
+- intent: user name
+  examples: |
+    - [Adarsh Pawshe](user_name)
+    - [Ajay Krishnamani](user_name)
+    - [Siddhivinayak Phulwadkar](user_name)
+    - [Yatin Deshpande](user_name)
+    - [Tejas Kumar](user_name)
+    - [Mohit Mishra](user_name)
+    - [Mark Zuckerberg](user_name)
+    - [Dipanshu Senegal](user_name)
+    - [Ajey Kumar](user_name)
+
+- intent: user age
+  examples: |
+    - [less than 18](user_age)
+    - [18 to 29](user_age)
+    - [30 to 49](user_age)
+    - [50 to 64](user_age)
+    - [65 and above](user_age)
+
+- intent: ask_doctor
+  examples: |
+    - What my doctor name
+    - what is the name of my doctor
+
+- intent: ask_time
+  examples: |
+    - what my time
+    - what is the time I have booked a slot for
+
+- intent: morning
+  examples: |
+    - Morning
+    - morning
+    - morn
+    - mor
+    - before noon
+    - before lunch
+
+- intent: evening
+  examples: |
+    - Evening
+    - evening
+    - eve
+    - after noon
+    - after lunch
+
+- intent: ask user_name
+  examples: |
+    - what my name
+    - what is my name
+  
+- intent: ask user_age
+  examples: |
+    - what my age
+    - what is my age
+
+
+  
+
+

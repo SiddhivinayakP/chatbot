@@ -1,0 +1,54 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Appointment
+  steps:
+  - intent: appointment
+  - action : utter_appointment
+
+- rule: Online
+  steps:
+  - intent: online
+  - action : utter_online
+
+- rule: Offline
+  steps:
+  - intent: offline
+  - action : utter_offline
+
+- rule: General Physician
+  steps:
+  - intent: physician
+  - action : utter_physician
+
+- rule: Paediatrician
+  steps:
+  - intent: paediatrician
+  - action : utter_paediatrician
+
+- rule: Orthopaedic
+  steps:
+  - intent: orthopaedic
+  - action : utter_orthopaedic
+
+- rule: Dermatologist
+  steps:
+  - intent: dermatologist
+  - action : utter_dermatologist
+
+
+
+
+
+
